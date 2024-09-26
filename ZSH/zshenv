@@ -1,0 +1,13 @@
+#
+# ZSH Environmental Variables
+#
+
+# homebrew
+export PATH="/opt/homebrew/bin:${PATH}"
+
+# vscode
+export VSCODE="codium"
+
+# pyenv
+export PYENV_ROOT="${HOME}/.pyenv"
+[[ -d "${PYENV_ROOT}/shims" ]] && export PATH="${PYENV_ROOT}/shims:$PATH"
