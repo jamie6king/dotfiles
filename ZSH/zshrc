@@ -2,6 +2,12 @@
 # --- ZSH Config
 #
 
+# --- aliases
+
+# gocryptfs
+alias vault-important="gocryptfs ${HOME}/.Vaults/Important ${HOME}/Vaults/Important"
+alias vault-recovery="gocryptfs ${HOME}/.Vaults/Recovery ${HOME}/Vaults/Recovery"
+
 # --- plugins
 
 # use antigen
