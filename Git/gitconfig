@@ -1,0 +1,31 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[core]
+	autocrlf = false
+	safecrlf = true
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+
+[includeIf "gitdir:~/Code/Makers/**"]
+	path = ~/.gitconfig-makers
+
+[includeIf "gitdir:~/Code/Null/**"]
+	path = ~/.gitconfig-null
+
+[includeIf "gitdir:~/Code/HX/**"]
+	path = ~/.gitconfig-hx
+
+[includeIf "gitdir:~/Code/Personal/**"]
+	path = ~/.gitconfig-personal
+
+[includeIf "gitdir:~/Code/Contrib/**"]
+	path = ~/.gitconfig-contrib
