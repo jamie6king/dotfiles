@@ -1,0 +1,82 @@
+#
+# --- Sway Config
+#
+
+# --- workspaces
+
+# change focus
+bindsym Mod4+1 workspace number 1
+bindsym Mod4+2 workspace number 2
+bindsym Mod4+3 workspace number 3
+bindsym Mod4+4 workspace number 4
+bindsym Mod4+5 workspace number 5
+bindsym Mod4+6 workspace number 6
+bindsym Mod4+7 workspace number 7
+bindsym Mod4+8 workspace number 8
+bindsym Mod4+9 workspace number 9
+bindsym Mod4+10 workspace number 10
+
+bindsym Mod4+Shift+1 move container to workspace number 1
+bindsym Mod4+Shift+2 move container to workspace number 2
+bindsym Mod4+Shift+3 move container to workspace number 3
+bindsym Mod4+Shift+4 move container to workspace number 4
+bindsym Mod4+Shift+5 move container to workspace number 5
+bindsym Mod4+Shift+6 move container to workspace number 6
+bindsym Mod4+Shift+7 move container to workspace number 7
+bindsym Mod4+Shift+8 move container to workspace number 8
+bindsym Mod4+Shift+9 move container to workspace number 9
+bindsym Mod4+Shift+10 move container to workspace number 10
+
+# --- programs
+
+# movement
+bindsym Mod4+Up focus up
+bindsym Mod4+Right focus right
+bindsym Mod4+Down focus down
+bindsym Mod4+Left focus left
+
+floating_modifier Mod4 normal
+
+bindsym Mod4+Up move up
+bindsym Mod4+Right move right
+bindsym Mod4+Down move down
+bindsym Mod4+Left move left
+
+# splitting
+bindsym Mod4+Shift+h splith
+bindsym Mod4+Shift+v splitv
+
+bindsym Mod4+Shift+s layout stacking
+bindsym Mod4+Shift+t layout tabbed
+bindsym Mod4+Shift+v toggle split
+bindsym Mod4+Shift+f fullscreen
+bindsym Mod4+Shift+space floating toggle
+
+# terminal
+bindsym Mod4+Return exec kitty
+
+# browser
+bindsym Mod4+b exec librewolf
+
+# close
+bindsym Mod4+q kill
+
+
+# --- theming
+
+# wallpaper
+output eDP-1 bg "${HOME}/.wallpaper.png"
+
+
+# --- system
+
+# keyboard
+input * {
+    xkb_layout "gb"
+}
+
+# touchpad
+input "1739:0:Synaptics_TM3276-022" {
+    tap enabled
+    natural_scroll enabled
+}
