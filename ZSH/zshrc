@@ -11,7 +11,7 @@ alias vault-recovery="gocryptfs ${HOME}/.Vaults/Recovery ${HOME}/Vaults/Recovery
 # --- plugins
 
 # use antigen
-source /Users/jamie.king/.antigen.zsh
+source "${HOME}/.antigen.zsh"
 
 # oh-my-zsh
 antigen use oh-my-zsh
