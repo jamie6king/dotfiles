@@ -8,6 +8,7 @@
 alias vault-important="gocryptfs ${HOME}/.Vaults/Important ${HOME}/Vaults/Important"
 alias vault-recovery="gocryptfs ${HOME}/.Vaults/Recovery ${HOME}/Vaults/Recovery"
 
+
 # --- plugins
 
 # use antigen
@@ -41,6 +42,7 @@ antigen theme gnzh
 
 # apply settings
 antigen apply
+
 
 # --- environmental variables
 

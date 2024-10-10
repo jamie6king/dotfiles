@@ -1,0 +1,48 @@
+#
+# --- ZSH Config
+#
+
+# --- aliases
+
+# gocryptfs
+alias vault-important="gocryptfs ${HOME}/.Vaults/Important ${HOME}/Vaults/Important"
+alias vault-recovery="gocryptfs ${HOME}/.Vaults/Recovery ${HOME}/Vaults/Recovery"
+
+# --- plugins
+
+# use antigen
+source "${HOME}/.antigen.zsh"
+
+# oh-my-zsh
+antigen use oh-my-zsh
+
+# unix plugins
+antigen bundle sudo
+
+# programming bundles
+antigen bundle git
+
+antigen bundle npm
+antigen bundle yarn
+
+antigen bundle python
+antigen bundle virtualenv
+
+antigen bundle vscode
+
+# zsh plugins
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# theme
+antigen theme gnzh
+
+# apply settings
+antigen apply
+
+
+# --- misc ZSH things
+
+# virtualenv_info
+function virtualenv_info {
+    [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
+}

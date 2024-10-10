@@ -1,0 +1,26 @@
+#
+# --- ZSH Config
+#
+
+# --- plugins
+
+# use antigen
+source "${HOME}/.antigen.zsh"
+
+# oh-my-zsh
+antigen use oh-my-zsh
+
+# unix plugins
+antigen bundle sudo
+
+# programming bundles
+antigen bundle git
+
+# zsh plugins
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# theme
+antigen theme gnzh
+
+# apply settings
+antigen apply

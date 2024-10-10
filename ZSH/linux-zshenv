@@ -1,0 +1,6 @@
+#
+# ZSH Environmental Variables
+#
+
+# gnome keyring
+export SSH_ASKPASS="/usr/libexec/seahorse/ssh-askpass"
