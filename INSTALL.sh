@@ -46,7 +46,7 @@ if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
     if [[ ${DEVICE} -eq 1 ]]; then
 
         sudo ln -s "./Gentoo/00-glados-cpu-flags" "/etc/portage/package.use/00-cpu-flags"
-        sudo ln -s"./Gentoo/00-glados-make.conf" "/etc/portage/make.conf"
+        sudo ln -s "./Gentoo/00-glados-make.conf" "/etc/portage/make.conf"
 
     elif [[ ${DEVICE} -eq 2 ]]; then
         
