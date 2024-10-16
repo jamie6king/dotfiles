@@ -14,7 +14,7 @@ bindsym Mod4+6 workspace number 6
 bindsym Mod4+7 workspace number 7
 bindsym Mod4+8 workspace number 8
 bindsym Mod4+9 workspace number 9
-bindsym Mod4+10 workspace number 10
+bindsym Mod4+0 workspace number 10
 
 bindsym Mod4+Shift+1 move container to workspace number 1
 bindsym Mod4+Shift+2 move container to workspace number 2
@@ -25,7 +25,7 @@ bindsym Mod4+Shift+6 move container to workspace number 6
 bindsym Mod4+Shift+7 move container to workspace number 7
 bindsym Mod4+Shift+8 move container to workspace number 8
 bindsym Mod4+Shift+9 move container to workspace number 9
-bindsym Mod4+Shift+10 move container to workspace number 10
+bindsym Mod4+Shift+0 move container to workspace number 10
 
 # --- programs
 
@@ -37,10 +37,10 @@ bindsym Mod4+Left focus left
 
 floating_modifier Mod4 normal
 
-bindsym Mod4+Up move up
-bindsym Mod4+Right move right
-bindsym Mod4+Down move down
-bindsym Mod4+Left move left
+bindsym Mod4+Shift+Up move up
+bindsym Mod4+Shift+Right move right
+bindsym Mod4+Shift+Down move down
+bindsym Mod4+Shift+Left move left
 
 # splitting
 bindsym Mod4+Shift+h splith
@@ -48,7 +48,7 @@ bindsym Mod4+Shift+v splitv
 
 bindsym Mod4+Shift+s layout stacking
 bindsym Mod4+Shift+t layout tabbed
-bindsym Mod4+Shift+v toggle split
+bindsym Mod4+Shift+p layout toggle split
 bindsym Mod4+Shift+f fullscreen
 bindsym Mod4+Shift+space floating toggle
 
@@ -61,14 +61,33 @@ bindsym Mod4+b exec librewolf
 # close
 bindsym Mod4+q kill
 
+# auto floating
+for_window [title="Extract archive"] floating enable
+
 
 # --- theming
 
 # wallpaper
-output eDP-1 bg "${HOME}/.wallpaper.png"
+output eDP-1 bg "$HOME/.wallpaper.png" fill
 
+# status bar
+exec sh -c "GTK=THEME=Adwaita waybar" &
+
+# title bars
+default_border pixel 4
+default_floating_border normal 4
+
+# borders
+hide_edge_borders --i3 smart
+
+# gaps
+gaps inner 8
+smart_gaps on
 
 # --- system
+
+# enable dbus
+exec dbus-update-activation-environment --all 
 
 # keyboard
 input * {
@@ -79,4 +98,20 @@ input * {
 input "1739:0:Synaptics_TM3276-022" {
     tap enabled
     natural_scroll enabled
+    scroll_factor 0.5
 }
+
+# display
+bindsym XF86MonBrightnessUp exec xbacklight -inc 4
+bindsym XF86MonBrightnessDown exec xbacklight -dec 4
+
+# audio
+exec gentoo-pipewire-launcher &
+
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+# restart
+bindsym Mod4+Mod1+r reload
