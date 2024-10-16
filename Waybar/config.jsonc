@@ -1,0 +1,93 @@
+//
+// Waybar Config
+//
+
+{
+
+    // positioning
+    "layer": "top",
+    "position": "bottom",
+    "height": 32,
+
+    // styles
+    "reload_style_on_change": true,
+
+    // modules
+    "modules-left": [ "sway/workspaces", "sway/resize" ],
+    "modules-right": [ "network", "custom/wireguard", "pulseaudio", "battery#int", "battery#ext", "clock" ],
+
+    // workspaces
+    "sway/workspaces": {
+
+        // always show all workspaces
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": [],
+        }
+    },
+
+    // clock
+    "clock": {
+        "format": "[ {:%a %H:%M} ]"
+    },
+
+    // network connection
+    "network": {
+        "format-wifi": "[ NET: {essid} ]",
+        "format-ethernet": "[ NET: ETHERNET ]",
+        "format-linked": "[ NET: UNKNOWN ]",
+        "format-disconnected": "[ NET: DISCONNECTED ]",
+        "format": "[ NET: DISCONNECTED ]"
+    },
+
+    // wireguard vpn
+    "custom/wireguard": {
+        "format": "[ {} ]",
+        "exec": "/home/portalbyte/Scripts/Linux/wireguard.sh",
+        "return-type": "json",
+        "interval": 3,
+
+        "on-click": "if [ -d /sys/class/net/ProtonVPN ]; then sudo wg-quick down ProtonVPN; else sudo wg-quick up ProtonVPN; fi; sleep 1"
+    },
+
+    // audio
+    "pulseaudio": {
+        "format": "[ VOL: {volume}% ]",
+        "format-bluetooth": "[ VOL: {volume}% ]",
+        "format-muted": "[ VOL: MUTED ]",
+
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+    
+    // internal battery
+    "battery#int": {
+        "bat": "BAT0",
+        "format": "[ INT: {capacity}% ]",
+        "format-charging": "[ EXT: {capacity}%+ ]",
+
+        "states": {
+            "warning": 20,
+            "critical": 10
+        }
+    },
+
+    // external battery
+    "battery#ext": {
+        "bat": "BAT1",
+        "format": "[ EXT: {capacity}% ]",
+        "format-charging": "[ EXT: {capacity}%+ ]",
+
+        "states": {
+            "warning": 20,
+            "critical": 10
+        }
+    }
+}

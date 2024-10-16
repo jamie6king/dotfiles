@@ -1,0 +1,109 @@
+/*
+** Waybar Styling
+*/
+
+/* global */
+* {
+    min-height: 0;
+
+    font-family: "JetBrains Mono", "Font Awesome";
+    font-size: 14px;
+    border-radius: 0;
+}
+
+/* bar */
+window#waybar {
+    background-color: #1E1E2E;
+    color: #CDD6F7;
+    
+    border-top: 2px solid #CBA6F7;
+}
+
+/* empty workspace */
+#workspaces button.empty {
+    color: #6C7086;
+}
+
+/* current workspace (second monitor) */
+#workspaces button.visible {
+    color: #CBA6F7;
+}
+
+/* current workspace */
+#workspaces button.active {
+    background-color: #CBA6F7;
+    color: #1E1E2E;
+}
+
+/* current window */
+#window {
+    padding: 0 8px;
+}
+
+/* keyboard state */
+#keyboard-state {
+    padding: 0 8px;
+    color: #F38BA8;
+}
+
+/* current network */
+#network {
+    padding: 0 8px;
+}
+
+/* no internet */
+#network.disabled,
+#network.disconnected {
+    color: #F38BA8;
+}
+
+/* unknown internet connection */
+#network.linked {
+    color: #FAB387;
+}
+
+/* wireguard*/
+#custom-wireguard {
+    padding: 0 8px;
+}
+
+/* inactive wireguard */
+#custom-wireguard.inactive {
+    color: #F38BA8;
+}
+
+/* audio */
+#pulseaudio {
+    padding: 0 8px;
+}
+
+/* bluetooth connection */
+#pulseaudio.bluetooth {
+    color: #89B4FA;
+}
+
+/* muted audio */
+#pulseaudio.muted {
+    color: #F38BA8;
+}
+
+/* battery */
+#battery {
+    padding: 0 8px;
+}
+
+/* low battery */
+#battery.warning {
+    color: #FAB387;
+}
+
+/* very low battery */
+#battery.critical {
+    color: #F38BA8
+}
+
+/* full battery */
+#battery.charging,
+#battery.full {
+    color: #A6E3A1;
+}
