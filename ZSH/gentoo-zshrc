@@ -4,6 +4,12 @@
 
 # --- aliases
 
+# emerge
+alias emerge-install="sudo emerge -aqv"
+alias emerge-update="sudo emaint -a sync"
+alias emerge-upgrade="sudo emerge -aqvuDN --with-bdeps=y @world"
+alias emerge-newuse="sudo emerge -aqvD --changed-use --with-bdeps=y @world"
+
 # gocryptfs
 alias vault-important="gocryptfs ${HOME}/.Vaults/Important ${HOME}/Vaults/Important"
 alias vault-recovery="gocryptfs ${HOME}/.Vaults/Recovery ${HOME}/Vaults/Recovery"
@@ -39,6 +45,10 @@ antigen theme gnzh
 # apply settings
 antigen apply
 
+# --- environmental variables
+
+# gpg
+export GPG_TTY="${TTY}"
 
 # --- misc ZSH things
 
