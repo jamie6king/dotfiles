@@ -43,7 +43,12 @@ if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
     sudo ln "./Gentoo/75-gnome-use" "/etc/portage/package.use/75-gnome"
     sudo ln "./Gentoo/85-wev-accept" "/etc/portage/package.accept_keywords/85-wev"
 
-    if [[ ${DEVICE} -eq 2 ]]; then
+    if [[ ${DEVICE} -eq 1 ]]; then
+
+        sudo ln "./Gentoo/00-gentoo-cpu-flags" "/etc/portage/package.use/00-cpu-flags"
+        sudo ln "./Gentoo/00-gentoo-make.conf" "/etc/portage/make.conf"
+
+    elif [[ ${DEVICE} -eq 2 ]]; then
         
         sudo ln "./Gentoo/00-wheatley-cpu-flags" "/etc/portage/package.use/00-cpu-flags"
         sudo ln "./Gentoo/00-wheatley-make.conf" "/etc/portage/make.conf"
