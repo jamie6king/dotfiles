@@ -1,0 +1,11 @@
+dev-python/PySDL2
+games-emulation/dgen-sdl
+games-emulation/m64py
+games-emulation/mupen64plus*
+games-emulation/snes9x
+games-util/game-device-udev-rules
+games-util/lutris
+games-util/steam-launcher
+gui-wm/gamescope
+media-libs/vkroots
+sys-libs/libudev-compat
