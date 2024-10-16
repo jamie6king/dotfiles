@@ -4,6 +4,7 @@ app-arch/zstd abi_x86_32
 app-emulation/wine-proton X
 dev-lang/orc abi_x86_32
 dev-lang/rust-bin abi_x86_32
+dev-libs/elfutils abi_x86_32
 dev-libs/expat abi_x86_32
 dev-libs/fribidi abi_x86_32
 dev-libs/glib abi_x86_32
@@ -96,12 +97,15 @@ sys-apps/dbus abi_x86_32 X
 sys-apps/systemd-utils abi_x86_32
 sys-apps/util-linux abi_x86_32
 sys-devel/llvm abi_x86_32
+sys-libs/gpm abi_x86_32
 sys-libs/libcap abi_x86_32
 sys-libs/libudev-compat abi_x86_32
 sys-libs/libunwind abi_x86_32
+sys-libs/ncurses abi_x86_32
 sys-libs/pam abi_x86_32
 sys-libs/zlib abi_x86_32 minizip
 virtual/glu abi_x86_32
+virtual/libelf abi_x86_32
 virtual/libiconv abi_x86_32
 virtual/libintl abi_x86_32
 virtual/libudev abi_x86_32
