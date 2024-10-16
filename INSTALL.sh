@@ -47,6 +47,8 @@ if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
 
         sudo ln -s "$(pwd)/Gentoo/00-glados-cpu-flags" "/etc/portage/package.use/00-cpu-flags"
         sudo ln -s "$(pwd)/Gentoo/00-glados-make.conf" "/etc/portage/make.conf"
+        sudo ln -s "$(pwd)/Gentoo/25-glados-amd-use" "/etc/portage/package.use/25-amd"
+        sudo ln -s "$(pwd)/Gentoo/25-glados-wayland-use" "/etc/portage/package.use/25-wayland"
 
     elif [[ ${DEVICE} -eq 2 ]]; then
         
