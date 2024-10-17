@@ -1,3 +1,4 @@
+dev-libs/libsass -lto
 dev-qt/qtbase X
 dev-qt/qtgui X
 dev-qt/qtmultimedia X
