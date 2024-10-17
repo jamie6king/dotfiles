@@ -1,5 +1,8 @@
 dev-qt/qtbase X
+dev-qt/qtgui X
 dev-qt/qtmultimedia X
+kde-frameworks/kwindowsystem X
 kde-plasma/plasma-desktop -webengine
 kde-plasma/powerdevil brightness-control
+media-sound/pulseaudio abi_x86_32
 media-video/vlc X
