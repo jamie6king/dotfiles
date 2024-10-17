@@ -2,3 +2,4 @@ dev-qt/qtbase X
 dev-qt/qtmultimedia X
 kde-plasma/plasma-desktop -webengine
 kde-plasma/powerdevil brightness-control
+media-video/vlc X
