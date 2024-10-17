@@ -32,6 +32,7 @@ if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
     sudo mkdir -p "/etc/portage/package.use"
     sudo mkdir -p "/etc/portage/repos.conf"
 
+    sudo ln -s "$(pwd)/Gentoo/00-nolto.conf" "/etc/portage/package.env/00-nolto.conf"
     sudo ln -s "$(pwd)/Gentoo/10-kernel-use" "/etc/portage/package.use/10-kernel"
     sudo ln -s "$(pwd)/Gentoo/25-gtk-use" "/etc/portage/package.use/25-gtk"
     sudo ln -s "$(pwd)/Gentoo/25-mesa-use" "/etc/portage/package.use/25-mesa"
