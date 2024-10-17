@@ -32,7 +32,7 @@ if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
     sudo mkdir -p "/etc/portage/package.use"
     sudo mkdir -p "/etc/portage/repos.conf"
 
-    sudo ln -s "$(pwd)/Gentoo/00-nolto.conf" "/etc/portage/package.env/00-nolto.conf"
+    sudo ln -s "$(pwd)/Gentoo/00-nolto.conf" "/etc/portage/package.env/nolto.conf"
     sudo ln -s "$(pwd)/Gentoo/10-kernel-use" "/etc/portage/package.use/10-kernel"
     sudo ln -s "$(pwd)/Gentoo/25-gtk-use" "/etc/portage/package.use/25-gtk"
     sudo ln -s "$(pwd)/Gentoo/25-mesa-use" "/etc/portage/package.use/25-mesa"
@@ -53,7 +53,7 @@ if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
         sudo ln -s "$(pwd)/Gentoo/00-glados-make.conf" "/etc/portage/make.conf"
         sudo ln -s "$(pwd)/Gentoo/25-glados-amd-use" "/etc/portage/package.use/25-amd"
         sudo ln -s "$(pwd)/Gentoo/25-glados-wayland-use" "/etc/portage/package.use/25-wayland"
-        sudo ln -s "$(pwd)/Gentoo/50-glados-kde-env" "/etc/portage/package.env/50-kde"
+        sudo ln -s "$(pwd)/Gentoo/00-glados-nolto" "/etc/portage/package.env/noltobuild"
         sudo ln -s "$(pwd)/Gentoo/50-glados-kde-use" "/etc/portage/package.use/50-kde"
 
     elif [[ ${DEVICE} -eq 2 ]]; then
