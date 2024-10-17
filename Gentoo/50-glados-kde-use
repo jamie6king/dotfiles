@@ -1,4 +1,4 @@
-dev-libs/libsass -lto NO_LTO="-Wno-error=odr" CFLAGS="${CFLAGS} ${NO_LTO}" CXXFLAGS="${CXXFLAGS} ${NO_LTO}" FCFLAGS="${FCFLAGS} ${NO_LTO}" FFLAGS="${FFLAGS} ${NO_LTO}"
+dev-libs/libsass NO_LTO="-Wno-error=odr" CFLAGS="${CFLAGS} ${NO_LTO}" CXXFLAGS="${CXXFLAGS} ${NO_LTO}" FCFLAGS="${FCFLAGS} ${NO_LTO}" FFLAGS="${FFLAGS} ${NO_LTO}"
 dev-qt/qtbase X
 dev-qt/qtgui X
 dev-qt/qtmultimedia X

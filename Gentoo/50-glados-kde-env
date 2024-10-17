@@ -1,0 +1,1 @@
+dev-libs/libsass NO_LTO="-Wno-error=odr" CFLAGS="${CFLAGS} ${NO_LTO}" CXXFLAGS="${CXXFLAGS} ${NO_LTO}" FCFLAGS="${FCFLAGS} ${NO_LTO}" FFLAGS="${FFLAGS} ${NO_LTO}"

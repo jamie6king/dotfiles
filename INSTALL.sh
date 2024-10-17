@@ -21,11 +21,13 @@ if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
 
     sudo rm "/etc/portage/make.conf"
     sudo rm -r "/etc/portage/package.accept_keywords"
+    sudo rm -r "/etc/portage/package.env"
     sudo rm -r "/etc/portage/package.mask"
     sudo rm -r "/etc/portage/package.use"
     sudo rm -r "/etc/portage/repos.conf"
 
     sudo mkdir -p "/etc/portage/package.accept_keywords"
+    sudo mkdir -p "/etc/portage/package.env"
     sudo mkdir -p "/etc/portage/package.mask"
     sudo mkdir -p "/etc/portage/package.use"
     sudo mkdir -p "/etc/portage/repos.conf"
@@ -50,6 +52,7 @@ if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
         sudo ln -s "$(pwd)/Gentoo/00-glados-make.conf" "/etc/portage/make.conf"
         sudo ln -s "$(pwd)/Gentoo/25-glados-amd-use" "/etc/portage/package.use/25-amd"
         sudo ln -s "$(pwd)/Gentoo/25-glados-wayland-use" "/etc/portage/package.use/25-wayland"
+        sudo ln -s "$(pwd)/Gentoo/50-glados-kde-env" "/etc/portage/package.env/50-kde"
         sudo ln -s "$(pwd)/Gentoo/50-glados-kde-use" "/etc/portage/package.use/50-kde"
 
     elif [[ ${DEVICE} -eq 2 ]]; then
