@@ -40,6 +40,7 @@ if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
     sudo ln -s "$(pwd)/Gentoo/25-mesa-use" "/etc/portage/package.use/25-mesa"
     sudo ln -s "$(pwd)/Gentoo/25-pipewire-use" "/etc/portage/package.use/25-pipewire"
     sudo ln -s "$(pwd)/Gentoo/25-plymouth-use" "/etc/portage/package.use/25-plymouth"
+    sudo ln -s "$(pwd)/Gentoo/50-chromium-use" "/etc/portage/package.use/50-chromium"
     sudo ln -s "$(pwd)/Gentoo/50-gocryptfs-accept" "/etc/portage/package.accept_keywords/50-gocryptfs"
     sudo ln -s "$(pwd)/Gentoo/50-librewolf-accept" "/etc/portage/package.accept_keywords/50-librewolf"
     sudo ln -s "$(pwd)/Gentoo/50-librewolf-use" "/etc/portage/package.use/50-librewolf"
