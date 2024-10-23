@@ -4,6 +4,7 @@
 
 # gnome keyring
 export SSH_ASKPASS="/usr/libexec/seahorse/ssh-askpass"
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/keyring/ssh"
 
 # vscodium
 export VSCODE_GALLERY_SERVICE_URL="https://marketplace.visualstudio.com/_apis/public/gallery"
