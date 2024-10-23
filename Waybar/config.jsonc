@@ -13,7 +13,7 @@
     "reload_style_on_change": true,
 
     // modules
-    "modules-left": [ "sway/workspaces", "sway/resize" ],
+    "modules-left": [ "sway/workspaces" ],
     "modules-right": [ "network", "custom/wireguard", "pulseaudio", "battery#int", "battery#ext", "clock" ],
 
     // workspaces
@@ -34,11 +34,6 @@
         }
     },
 
-    // clock
-    "clock": {
-        "format": "[ {:%a %H:%M} ]"
-    },
-
     // network connection
     "network": {
         "format-wifi": "[ NET: {essid} ]",
@@ -51,7 +46,7 @@
     // wireguard vpn
     "custom/wireguard": {
         "format": "[ {} ]",
-        "exec": "/home/portalbyte/Scripts/Linux/wireguard.sh",
+        "exec": "${HOME}/Scripts/Linux/Wireguard.sh",
         "return-type": "json",
         "interval": 3,
 
@@ -89,5 +84,10 @@
             "warning": 20,
             "critical": 10
         }
+    },
+
+    // clock
+    "clock": {
+        "format": "[ {:%a %H:%M} ]"
     }
 }
