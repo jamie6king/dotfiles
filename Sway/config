@@ -71,7 +71,7 @@ for_window [title="Extract archive"] floating enable
 output eDP-1 bg "$HOME/.wallpaper.png" fill
 
 # status bar
-exec waybar &
+exec "$HOME/Scripts/Linux/Waybar.sh" &
 
 # title bars
 default_border pixel 4
