@@ -106,6 +106,17 @@ if [[ ${DEVICE} -eq 2 ]]; then
 
 fi
 
+# mako
+if [[ ${DEVICE} -eq 2 ]]; then
+
+    rm -r "${HOME}/.config/mako"
+
+    mkdir -p "${HOME}/.config/mako"
+
+    ln "./Mako/config" "${HOME}/.config/mako/config"
+
+fi
+
 # neovim
 rm -r "${HOME}/.config/nvim"
 

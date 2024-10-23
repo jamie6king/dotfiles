@@ -108,6 +108,9 @@ input "1739:0:Synaptics_TM3276-022" {
 bindsym XF86MonBrightnessUp exec xbacklight -inc 4
 bindsym XF86MonBrightnessDown exec xbacklight -dec 4
 
+# notifications
+exec mako &
+
 # audio
 exec gentoo-pipewire-launcher &
 
