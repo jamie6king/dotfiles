@@ -35,6 +35,8 @@ dev-python/packaging python_targets_python3_11
 dev-python/platformdirs python_targets_python3_11
 dev-python/PyQt5 python_targets_python3_11
 dev-python/PyQt5-sip python_targets_python3_11
+dev-python/PyQt6 python_targets_python3_11
+dev-python/PyQt6-sip python_targets_python3_11
 dev-python/PyQt-builder python_targets_python3_11
 dev-python/PySDL2 python_targets_python3_11
 dev-python/setuptools python_targets_python3_11
