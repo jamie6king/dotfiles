@@ -58,6 +58,7 @@ if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
         sudo ln -s "$(pwd)/Gentoo/25-glados-wayland-use" "/etc/portage/package.use/25-wayland"
         sudo ln -s "$(pwd)/Gentoo/50-glados-kde-env" "/etc/portage/package.env/50-kde"
         sudo ln -s "$(pwd)/Gentoo/50-glados-kde-use" "/etc/portage/package.use/50-kde"
+        sudo ln -s "$(pwd)/Gentoo/50-glados-qbittorrent-use" "/etc/portage/package.use/50-qbittorrent"
 
     elif [[ ${DEVICE} -eq 2 ]]; then
         
@@ -70,6 +71,8 @@ if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
         sudo ln -s "$(pwd)/Gentoo/50-wheatley-file-roller-mask" "/etc/portage/package.mask/50-file-roller"
         sudo ln -s "$(pwd)/Gentoo/50-wheatley-nemo-use" "/etc/portage/package.use/50-nemo"
         sudo ln -s "$(pwd)/Gentoo/50-wheatley-sway-use" "/etc/portage/package.use/50-sway"
+        sudo ln -s "$(pwd)/Gentoo/50-wheatley-qbittorrent-use" "/etc/portage/package.use/50-qbittorrent"
+        sudo ln -s "$(pwd)/Gentoo/50-wheatley-tofi-accept" "/etc/portage/package.accept_keywords/50-tofi"
         sudo ln -s "$(pwd)/Gentoo/50-wheatley-waybar-use" "/etc/portage/package.use/50-waybar"
         sudo ln -s "$(pwd)/Gentoo/75-wheatley-catppuccin-accept" "/etc/portage/package.accept_keywords/75-catppuccin"
         sudo ln -s "$(pwd)/Gentoo/75-wheatley-catppuccin-use" "/etc/portage/package.use/75-catppuccin"
@@ -142,6 +145,17 @@ if [[ ${DEVICE} -eq 2 ]]; then
     mkdir -p "${HOME}/.config/sway"
 
     ln "./Sway/config" "${HOME}/.config/sway/config"
+
+fi
+
+# tofi
+if [[ ${DEVICE} -eq 2 ]]; then
+
+    rm -r "${HOME}/.config/tofi"
+
+    mkdir -p "${HOME}/.config/tofi"
+
+    ln "./Tofi/config" "${HOME}/.config/tofi/config"
 
 fi
 
