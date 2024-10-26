@@ -127,6 +127,7 @@ x11-libs/libXdamage abi_x86_32
 x11-libs/libXdmcp abi_x86_32
 x11-libs/libXext abi_x86_32
 x11-libs/libXfixes abi_x86_32
+x11-libs/libXft abi_x86_32
 x11-libs/libXi abi_x86_32
 x11-libs/libxkbcommon abi_x86_32
 x11-libs/libXrandr abi_x86_32
@@ -134,6 +135,6 @@ x11-libs/libXrender abi_x86_32
 x11-libs/libxshmfence abi_x86_32
 x11-libs/libXv abi_x86_32
 x11-libs/libXxf86vm abi_x86_32
-x11-libs/pango abi_x86_32
+x11-libs/pango abi_x86_32 X
 x11-libs/pixman abi_x86_32
 x11-libs/xcb-util-keysyms abi_x86_32
