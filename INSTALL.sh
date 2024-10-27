@@ -46,6 +46,7 @@ if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
     sudo ln -s "$(pwd)/Gentoo/50-librewolf-use" "/etc/portage/package.use/50-librewolf"
     sudo ln -s "$(pwd)/Gentoo/50-lutris-accept" "/etc/portage/package.accept_keywords/50-lutris"
     sudo ln -s "$(pwd)/Gentoo/50-lutris-use" "/etc/portage/package.use/50-lutris"
+    sudo ln -s "$(pwd)/Gentoo/50-postgresql-use" "/etc/portage/package.use/50-postgresql"
     sudo ln -s "$(pwd)/Gentoo/50-vscodium-use" "/etc/portage/package.use/50-vscodium"
     sudo ln -s "$(pwd)/Gentoo/75-gnome-use" "/etc/portage/package.use/75-gnome"
     sudo ln -s "$(pwd)/Gentoo/85-wev-accept" "/etc/portage/package.accept_keywords/85-wev"
