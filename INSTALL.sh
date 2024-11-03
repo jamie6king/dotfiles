@@ -47,6 +47,7 @@ if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
     sudo ln -s "$(pwd)/Gentoo/50-lutris-accept" "/etc/portage/package.accept_keywords/50-lutris"
     sudo ln -s "$(pwd)/Gentoo/50-lutris-use" "/etc/portage/package.use/50-lutris"
     sudo ln -s "$(pwd)/Gentoo/50-postgresql-use" "/etc/portage/package.use/50-postgresql"
+    sudo ln -s "$(pwd)/Gentoo/50-samba-use" "/etc/portage/package.use/50-samba"
     sudo ln -s "$(pwd)/Gentoo/50-vscodium-use" "/etc/portage/package.use/50-vscodium"
     sudo ln -s "$(pwd)/Gentoo/75-gnome-use" "/etc/portage/package.use/75-gnome"
     sudo ln -s "$(pwd)/Gentoo/85-wev-accept" "/etc/portage/package.accept_keywords/85-wev"
@@ -71,9 +72,10 @@ if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
         sudo ln -s "$(pwd)/Gentoo/25-wheatley-wayland-use" "/etc/portage/package.use/25-wayland"
         sudo ln -s "$(pwd)/Gentoo/50-wheatley-file-roller-mask" "/etc/portage/package.mask/50-file-roller"
         sudo ln -s "$(pwd)/Gentoo/50-wheatley-nemo-use" "/etc/portage/package.use/50-nemo"
-        sudo ln -s "$(pwd)/Gentoo/50-wheatley-sway-use" "/etc/portage/package.use/50-sway"
         sudo ln -s "$(pwd)/Gentoo/50-wheatley-qbittorrent-use" "/etc/portage/package.use/50-qbittorrent"
+        sudo ln -s "$(pwd)/Gentoo/50-wheatley-sway-use" "/etc/portage/package.use/50-sway"
         sudo ln -s "$(pwd)/Gentoo/50-wheatley-tofi-accept" "/etc/portage/package.accept_keywords/50-tofi"
+        sudo ln -s "$(pwd)/Gentoo/50-wheatley-vlc-use" "/etc/portage/package.use/50-vlc"
         sudo ln -s "$(pwd)/Gentoo/50-wheatley-waybar-use" "/etc/portage/package.use/50-waybar"
         sudo ln -s "$(pwd)/Gentoo/75-wheatley-catppuccin-accept" "/etc/portage/package.accept_keywords/75-catppuccin"
         sudo ln -s "$(pwd)/Gentoo/75-wheatley-catppuccin-use" "/etc/portage/package.use/75-catppuccin"
@@ -178,6 +180,17 @@ if [[ ${DEVICE} -eq 2 ]]; then
 
     ln "./Waybar/config.jsonc" "${HOME}/.config/waybar/config"
     ln "./Waybar/style.css" "${HOME}/.config/waybar/style.css"
+
+fi
+
+# yt-dlp
+if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
+
+    rm -r "${HOME}/.config/yt-dlp"
+    
+    mkdir -p "${HOME}/.config/yt-dlp"
+
+    ln "./YT-DLP/video.conf" "${HOME}/.config/yt-dlp/video.conf"
 
 fi
 
