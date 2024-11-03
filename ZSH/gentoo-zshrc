@@ -14,6 +14,17 @@ alias emerge-newuse="sudo emerge -aqvD --changed-use --with-bdeps=y @world"
 alias vault-important="gocryptfs ${HOME}/.Vaults/Important ${HOME}/Vaults/Important"
 alias vault-recovery="gocryptfs ${HOME}/.Vaults/Recovery ${HOME}/Vaults/Recovery"
 
+# yt-dlp
+#alias yt-video="yt-dlp --config-location ${HOME}/.config/yt-dlp/video.conf"
+
+alias yt-music="yt-dlp --config-location ${HOME}/.config/yt-dlp/music.conf"
+
+yt-video() {
+    yt-dlp --config-location ${HOME}/.config/yt-dlp/video.conf -o "${2}-original" ${1}
+    ffmpeg -i "${2}-original.mp4" -vcodec libx265 -crf 28 "${2}.mp4"
+}
+
+
 # --- plugins
 
 # use antigen
