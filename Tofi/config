@@ -1,0 +1,55 @@
+#
+# Tofi Config
+#
+
+### --- positioning
+
+# position
+anchor = bottom
+
+# size
+width = 100%
+height = 30
+
+min-input-width = 256
+
+# orientation
+horizontal = true
+
+# padding
+padding-top = 4
+padding-right = 8
+padding-bottom = 0
+padding-left = 8
+
+result-spacing = 16
+selection-background-padding = 12
+
+clip-to-padding = false
+
+
+### --- theming
+
+# font
+font = "JetBrains Mono"
+font-size = 12
+
+# colors
+background-color = #1E1E2E
+text-color = #CDD6F7
+
+selection-color = #1E1E2E
+selection-background = #CBA6F7
+
+# outlines
+outline-width = 0
+border-width = 0
+
+
+### --- launching
+
+# prompt text
+prompt-text = "run: "
+
+# launch desktop files
+drun-launch = true
