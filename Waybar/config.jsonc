@@ -40,7 +40,8 @@
         "format-ethernet": "[ NET: ETHERNET ]",
         "format-linked": "[ NET: UNKNOWN ]",
         "format-disconnected": "[ NET: DISCONNECTED ]",
-        "format": "[ NET: DISCONNECTED ]"
+        "format": "[ NET: DISCONNECTED ]",
+        "tooltip-format": "IP Address: {ipaddr}"
     },
 
     // wireguard vpn
@@ -50,7 +51,7 @@
         "return-type": "json",
         "interval": 3,
 
-        "on-click": "if [ -d /sys/class/net/ProtonVPN ]; then sudo wg-quick down ProtonVPN; else sudo wg-quick up ProtonVPN; fi; sleep 1"
+        "on-click": "if [ -d /sys/class/net/ProtonVPN ]; then pkexec wg-quick down ProtonVPN; else pkexec wg-quick up ProtonVPN; fi; sleep 1"
     },
 
     // audio
@@ -58,6 +59,7 @@
         "format": "[ VOL: {volume}% ]",
         "format-bluetooth": "[ VOL: {volume}% ]",
         "format-muted": "[ VOL: MUTED ]",
+        "tooltip-format": "Source: {desc}",
 
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     },
@@ -88,6 +90,7 @@
 
     // clock
     "clock": {
-        "format": "[ {:%a %H:%M} ]"
+        "format": "[ {:%a %H:%M} ]",
+        "tooltip-format": "{:%Y-%m-%d %H:%M}"
     }
 }
