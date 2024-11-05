@@ -103,7 +103,7 @@ media-sound/pulseaudio abi_x86_32
 media-video/ffmpeg abi_x86_32
 media-video/pipewire abi_x86_32
 net-dns/libidn2 abi_x86_32
-net-fs/samba abi_x86_32
+net-fs/samba abi_x86_32 winbind
 net-libs/cups abi_x86_32
 net-libs/gnutls abi_x86_32
 net-libs/libasyncns abi_x86_32
@@ -143,6 +143,7 @@ x11-libs/gdk-pixbuf abi_x86_32
 x11-libs/gtk+ abi_x86_32
 x11-libs/libdrm abi_x86_32
 x11-libs/libpciaccess abi_x86_32
+x11-libs/libvdpau abi_x86_32
 x11-libs/libX11 abi_x86_32
 x11-libs/libXau abi_x86_32
 x11-libs/libxcb abi_x86_32

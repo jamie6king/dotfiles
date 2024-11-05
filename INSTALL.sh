@@ -44,6 +44,7 @@ if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
     sudo ln -s "$(pwd)/Gentoo/50-gocryptfs-accept" "/etc/portage/package.accept_keywords/50-gocryptfs"
     sudo ln -s "$(pwd)/Gentoo/50-librewolf-accept" "/etc/portage/package.accept_keywords/50-librewolf"
     sudo ln -s "$(pwd)/Gentoo/50-librewolf-use" "/etc/portage/package.use/50-librewolf"
+    sudo ln -s "$(pwd)/Gentoo/50-localsend-accept" "/etc/portage/package.accept_keywords/50-localsend"
     sudo ln -s "$(pwd)/Gentoo/50-lutris-accept" "/etc/portage/package.accept_keywords/50-lutris"
     sudo ln -s "$(pwd)/Gentoo/50-lutris-use" "/etc/portage/package.use/50-lutris"
     sudo ln -s "$(pwd)/Gentoo/50-postgresql-use" "/etc/portage/package.use/50-postgresql"
