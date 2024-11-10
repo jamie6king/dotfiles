@@ -31,6 +31,7 @@ dev-libs/lzo abi_x86_32
 dev-libs/nettle abi_x86_32
 dev-libs/openssl abi_x86_32
 dev-libs/popt abi_x86_32
+dev-libs/quazip qt6
 dev-libs/wayland abi_x86_32
 dev-python/backports-tarfile python_targets_python3_11
 dev-python/dbus-python python_targets_python3_11
@@ -54,6 +55,7 @@ dev-python/setuptools-scm python_targets_python3_11
 dev-python/sip python_targets_python3_11
 dev-python/trove-classifiers python_targets_python3_11
 dev-python/wheel python_targets_python3_11
+games-action/prismlauncher qt6
 games-emulation/m64py python_targets_python3_11
 gnome-base/librsvg abi_x86_32
 gui-libs/libdecor abi_x86_32
