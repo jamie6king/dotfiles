@@ -2,6 +2,7 @@ dev-libs/libsass -lto
 dev-qt/qtbase X
 dev-qt/qtgui X
 dev-qt/qtmultimedia X
+kde-frameworks/kglobalaccel X
 kde-frameworks/kwindowsystem X
 kde-plasma/plasma-desktop -webengine
 kde-plasma/powerdevil brightness-control
