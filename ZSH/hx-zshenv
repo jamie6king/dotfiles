@@ -3,7 +3,10 @@
 #
 
 # homebrew
-export PATH="/opt/homebrew/bin:${PATH}"
+export PATH="/opt/homebrew/bin:/opt/homebrew/opt/postgresql@15/bin:${PATH}"
+
+# macports
+export PATH="/opt/local/bin:${PATH}"
 
 # vscode
 export VSCODE="codium"
