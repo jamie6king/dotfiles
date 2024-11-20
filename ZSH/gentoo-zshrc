@@ -22,6 +22,7 @@ alias yt-music="yt-dlp --config-location ${HOME}/.config/yt-dlp/music.conf"
 yt-video() {
     yt-dlp --config-location ${HOME}/.config/yt-dlp/video.conf -o "${2}-original" ${1}
     ffmpeg -i "${2}-original.mp4" -vcodec libx265 -crf 28 "${2}.mp4"
+    rm "${2}-original.mp4"
 }
 
 
