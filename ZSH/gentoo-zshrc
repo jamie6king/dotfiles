@@ -15,8 +15,6 @@ alias vault-important="gocryptfs ${HOME}/.Vaults/Important ${HOME}/Vaults/Import
 alias vault-recovery="gocryptfs ${HOME}/.Vaults/Recovery ${HOME}/Vaults/Recovery"
 
 # yt-dlp
-#alias yt-video="yt-dlp --config-location ${HOME}/.config/yt-dlp/video.conf"
-
 alias yt-music="yt-dlp --config-location ${HOME}/.config/yt-dlp/music.conf"
 
 yt-video() {

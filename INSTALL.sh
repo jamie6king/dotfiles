@@ -186,7 +186,7 @@ if [[ ${DEVICE} -eq 2 ]]; then
 fi
 
 # yt-dlp
-if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 ]]; then
+if [[ ${DEVICE} -eq 1 || ${DEVICE} -eq 2 || ${DEVICE} -eq 4 ]]; then
 
     rm -r "${HOME}/.config/yt-dlp"
     
